@@ -1,0 +1,18 @@
+{% extends 'CodeCrewSiteApp/base.html' %}
+{% load static %}
+{% block header %}
+Contact Us
+{% endblock %}
+<!--change the sidebar to empty-->
+{% block sidebar %}
+{% endblock sidebar %}
+{% block content %}
+<form method="post">
+    {{ form.as_p}}
+    <button>Submit</button>
+</form>
+{% endblock %}
+
+{% block footer %}
+Stuff
+{% endblock %}

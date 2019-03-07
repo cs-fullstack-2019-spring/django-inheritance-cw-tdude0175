@@ -1,0 +1,39 @@
+body {
+    display: grid;
+    background: lightblue;
+    text-align: center;
+    margin: 1% 2%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    grid-gap: 1em;
+}
+/*use a grid layout to display the page and outline each section with a border*/
+nav {
+    grid-column: 1/13;
+    grid-row: 1;
+    border: 1px solid lightpink;
+}
+
+header {
+    grid-column: 1/13;
+    grid-row: 2/4;
+    border: 1px solid greenyellow;
+}
+
+article {
+    grid-column: 1/4;
+    grid-row: 4/13;
+    border: 1px solid darkslategrey;
+}
+
+section {
+    grid-column: 4/13;
+    grid-row: 4/13;
+    border: 1px solid rebeccapurple;
+}
+
+footer {
+    grid-column: 1/13;
+    grid-row: 13/16;
+    border: 1px solid white;
+}

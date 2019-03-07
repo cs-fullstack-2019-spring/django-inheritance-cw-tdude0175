@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CodeCrewSiteApp/stylesheets/base.css' %}">
+</head>
+<body>
+<!--each page inherits from base for the layout and such swapping out necessary content-->
+<nav>
+    <a href="{% url 'index' %}"><img src="{% static 'CodeCrewSiteApp/images/CodeCrew.webp' %}" alt="CodeCrew Home"></a>
+    <a href="{% url 'AboutUs' %}">About Us</a>
+    <a href="{% url 'Gallery' %}">Gallery</a>
+    <a href="{% url 'Resources' %}">Resources</a>
+    <a href="{% url 'ContactUs' %}">Contact Us</a>
+    <a href="{% url 'SecretPage' %}">Don't Click here</a>
+</nav>
+<hr/>
+<header>
+    <h1>
+        {% block header %}
+        Home Page
+        {% endblock header %}
+    </h1>
+</header>
+{% block sidebar %}
+<article>
+
+    Donate Now & Make Computer Science Education Accessible to More Students and Schools
+    Making a donation means we are able to mentor more kids in computer science, equip them with 21st century tech
+    skills, and prepare them for futures in the tech industry.
+
+</article>
+{% endblock sidebar %}
+<section>
+    {% block content %}
+    {% endblock content %}
+</section>
+<footer>
+    {% block footer %}
+    {% endblock footer %}
+</footer>
+</body>
+</html>
