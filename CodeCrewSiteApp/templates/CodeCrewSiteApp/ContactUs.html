@@ -8,6 +8,7 @@ Contact Us
 {% endblock sidebar %}
 {% block content %}
 <form method="post">
+    {% csrf_token %}
     {{ form.as_p}}
     <button>Submit</button>
 </form>
